@@ -13,3 +13,4 @@ Bem-vindo ao repositório da **UEFA Champions League**! Este projeto é uma home
 
 # QR Code
 
+![image](https://github.com/user-attachments/assets/2de41e80-50c8-429a-afd1-dbaae5313e5f)
