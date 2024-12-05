@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados e Configurações Básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA Champions League</title>
+    <meta name="description" content="Descubra tudo sobre a UEFA Champions League, sua história, recordes, impacto global e muito mais!">
+
+    <!-- Links de Estilo e Fontes -->
+    <link rel="stylesheet" href="/CSS/champions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Ícone do Site -->
+    <link rel="icon" href="/logochamp.webp" type="image/x-icon">
+
+    <!-- Estilo -->
+    <style>
+
+/* Variáveis Globais */
+:root {
+    --primary-dark: #061325;
+    --secondary-dark: #001B4F;
+    --accent-gold: #FFD700;
+    --text-light: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.3s;
+}
+
+/* Configurações Globais */
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all var(--transition-speed) ease;
+}
+
+body {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+/* Estilos de Texto */
+.text-gradient {
+    background: linear-gradient(45deg, var(--accent-gold), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Header */
+.header {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: 
+        linear-gradient(45deg, rgba(6, 19, 37, 0.8), rgba(0, 27, 79, 0.6)),
+        url('/champions.avif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 19, 37, 0.7);
+    z-index: -1;
+}
+
+.header h1 {
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, var(--accent-gold), var(--text-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: subtle-movement 5s infinite alternate;
+}
+
+.header p {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões Header */
+.header-btn {
+    display: inline-block;
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.header-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-dark);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav a:hover {
+    color: var(--accent-gold);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent-gold);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Seções Principais */
+.main {
+    padding: 3rem 2rem;
+    text-align: justify;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.section h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: var(--accent-gold);
+}
+
+.section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+/* Tabelas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 20px var(--shadow-color);
+    font-size: 1.2rem;
+}
+
+.table th, 
+.table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-dark);
+}
+
+.table th {
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.table tr:hover {
+    background-color: rgba(0, 27, 79, 0.1);
+}
+
+/* Rodapé */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 2rem; 
+    padding: 2rem;
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 1px; 
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+    max-width: 125px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries Responsivas */
+@media screen and (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Barra de Rolagem Personalizada */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-gold);
+    border-radius: 6px;
+    transition: background var(--transition-speed) ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FFB700;
+}
+
+/* Seleção de Texto */
+::selection {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Componentes de Animação */
+.animate-on-load {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Imagens de Seção */
+.section-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.section-image::after {
+    content: attr(data-caption);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(6, 19, 37, 0.8);
+    color: var(--text-light);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all var(--transition-speed) ease;
+    text-align: center;
+}
+
+.section-image:hover {
+    transform: scale(1.02);
+}
+
+.section-image:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container de Imagens */
+.section-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.section-image-container:hover .image-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.section-image-container:hover .section-image {
+    transform: scale(1.05);
+}
+
+/* Legenda de Imagem */
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(6, 19, 37, 0.7);
+    color: var(--text-light);
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Media Queries para Imagens */
+@media (max-width: 768px) {
+    .section-image {
+        height: 250px;
+    }
+
+    .image-caption {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Animações */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Logo do Rodapé */
+.footer-logo {
+    max-width: 125px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Botão Interativo */
+.interactive-btn {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--accent-gold);
+    color: var(--text-light);
+    padding: 12px 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+.interactive-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-gold);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.interactive-btn:hover {
+    color: var(--primary-dark);
+}
+
+.interactive-btn:hover::before {
+    left: 0;
+}
+
+/* Efeito de Cartão */
+.card-effect {
+    background-color: rgba(0, 27, 79, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.card-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed) ease;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Texto com Gradiente */
+.text-gradient {
+    background: linear-gradient(45deg, var(--accent-gold), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Spinner de Carregamento */
+.loading-spinner {
+    border: 4px solid rgba(255, 215, 0, 0.2);
+    border-top: 4px solid var(--accent-gold);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Foco */
+*:focus {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 3px;
+}
+
+/* Media Queries Responsivas */
+@media (max-width: 600px) {
+    :root {
+        --font-scale: 0.8;
+    }
+
+    body {
+        font-size: calc(16px * var(--font-scale));
+    }
+
+    .responsive-flex {
+        flex-direction: column;
+    }
+}
+
+/* Ajustes de Fonte Globais */
+body {
+    font-size: 18px;
+}
+
+/* Ajustes de Tamanho de Fonte Específicos */
+.header h1 {
+    font-size: clamp(4rem, 8vw, 6rem);
+}
+
+.header p {
+    font-size: 2.2rem;
+}
+
+.section h2 {
+    font-size: 3.5rem;
+}
+
+.section p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+.nav a {
+    font-size: 1.6rem;
+}
+
+.table {
+    font-size: 1.2rem;
+}
+
+.table th {
+    font-size: 1.3rem;
+}
+
+.footer p {
+    font-size: 1.3rem;
+}
+
+.section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.5rem;
+}
+
+/* Media Queries para Ajustes de Fonte */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header h1 {
+        font-size: clamp(3rem, 6vw, 4rem);
+    }
+
+    .section h2 {
+        font-size: 2.8rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <h1>UEFA Champions League</h1>
+        <p>O Maior Torneio de Clubes do Mundo</p>
+        <a href="#historia" class="header-btn">Descubra Mais</a>
+    </header>
+
+    <!-- Navegação -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#formato">Formato</a></li>
+            <li><a href="#recordes">Recordes</a></li>
+            <li><a href="#impacto">Impacto Global</a></li>
+            <li><a href="#momentos">Melhores Momentos</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+        <section id="historia" class="section">
+            <h2>História da Champions League</h2>
+            <div class="section-divider"></div>
+            <p>A UEFA Champions League, anteriormente chamada de Taça dos Clubes Campeões Europeus, teve sua criação em 1955. Inspirada pela ideia de Gabriel Hanot, jornalista da revista francesa L’Équipe, a competição nasceu para coroar o melhor time do continente europeu.</p>
+            <p>No formato inicial, apenas os campeões das ligas nacionais participavam, disputando partidas eliminatórias desde o começo até a final. O Real Madrid foi o grande protagonista das primeiras edições, conquistando os cinco títulos inaugurais entre 1956 e 1960.</p>
+            <p>Em 1992, o torneio foi reformulado, ganhando a atual identidade e introduzindo a fase de grupos, ampliando a participação para vice-campeões de algumas ligas. Essa mudança marcou o início de um crescimento exponencial da competição, que hoje é o maior evento de clubes do futebol mundial.</p>
+            <div class="section-image-container">
+              <img src="/realmadrid1950.jpg" 
+                   alt="Jogadores do Real Madrid nos anos 1950" 
+                   class="section-image">
+              <div class="image-caption">Real Madrid erguendo a taça da competição na década de 1950</div>
+          </div>
+          </section>
+      
+          <section id="formato" class="section">
+            <h2>A Evolução do Formato</h2>
+            <div class="section-divider"></div>
+            <p>Desde sua criação, a Champions League passou por mudanças significativas no formato. Inicialmente, a competição era estritamente eliminatória, com jogos de ida e volta até a decisão, que acontecia em campo neutro.</p>
+            <p>A reformulação de 1992 introduziu uma fase de grupos antes das etapas eliminatórias, permitindo maior participação de equipes de ligas fortes e aumentando a atratividade comercial do torneio. Novas alterações ao longo das décadas ampliaram ainda mais a quantidade de clubes participantes, com até quatro times de ligas como da Inglaterra, Espanha e Alemanha.</p>
+            <p>A partir de 2024, o torneio adotou o modelo de “liga suíça”, onde cada equipe disputa oito jogos contra adversários diferentes antes de avançar para os mata-matas, adicionando um novo dinamismo à competição.</p>
+            <div class="section-image-container">
+              <img src="/trofeuatual.avif" 
+                   alt="Troféu da UEFA Champions League moderno" 
+                   class="section-image">
+              <div class="image-caption">Troféu da UEFA Champions League nos dias atuais</div>
+          </div>
+          </section>
+      
+          <section id="recordes" class="section">
+            <h2>Recordes Abrangentes</h2>
+            <div class="section-divider"></div>
+            
+            <h3>Maiores Vencedores</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Clube</th>
+                  <th>Títulos</th>
+                  <th>Anos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Real Madrid</td>
+                  <td>14</td>
+                  <td>1956, 1957, 1958, 1959, 1960, 1998, 2000, 2002, 2014, 2016, 2017, 2018, 2022 e 2024</td>
+                </tr>
+                <tr>
+                  <td>AC Milan</td>
+                  <td>7</td>
+                  <td>1963, 1969, 1989, 1990, 1994, 2003 e 2007</td>
+                </tr>
+                <tr>
+                  <td>Bayern de Munique</td>
+                  <td>6</td>
+                  <td>1974, 1975, 1976, 2001, 2013 e 2020</td>
+                </tr>
+                <tr>
+                    <td>Liverpool</td>
+                    <td>6</td>
+                    <td>1977, 1978, 1981, 1984, 2005 e 2019</td>
+                </tr>
+                <tr>
+                    <td>Barcelona</td>
+                    <td>5</td>
+                    <td>1992, 2006, 2009, 2011 e 2015</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h3>Distribuição de Títulos por País</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>País</th>
+                        <th>Número de Títulos</th>
+                        <th>Clubes Campeões</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Espanha</td>
+                        <td>19</td>
+                        <td>Real Madrid (14) e Barcelona (5)</td>
+                    </tr>
+                    <tr>
+                        <td>Inglaterra</td>
+                        <td>15</td>
+                        <td>Liverpool (6), Manchester United (3), Nottingham Forest (2), Chelsea (2), Aston Villa (1) e Manchester City (1)</td>
+                    </tr>
+                    <tr>
+                        <td>Itália</td>
+                        <td>12</td>
+                        <td>AC Milan (7), Inter de Milão (3), Juventus (2)</td>
+                    </tr>
+                    <tr>
+                        <td>Alemanha</td>
+                        <td>7</td>
+                        <td>Bayern München (6) e Borussia Dortmund (1)</td>
+                    </tr>
+                    <tr>
+                        <td>Holanda</td>
+                        <td>6</td>
+                        <td>Ajax (4), Feyenoord (1) e PSV(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Portugal</td>
+                        <td>4</td>
+                        <td>Benfica (2) e Porto (2)</td>
+                    </tr>
+                </tbody>
+            </table>
+      
+            <h3>Maiores Artilheiros</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Posição</th>
+                  <th>Jogador</th>
+                  <th>Clube(s)</th>
+                  <th>Gols</th>
+                  <th>Período</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1º</td>
+                  <td>Cristiano Ronaldo</td>
+                  <td>Real Madrid, Juventus e Manchester United</td>
+                  <td>141</td>
+                  <td>2003-2022</td>
+                </tr>
+                <tr>
+                  <td>2º</td>
+                  <td>Lionel Messi</td>
+                  <td>Barcelona e PSG</td>
+                  <td>129</td>
+                  <td>2005-2023</td>
+                </tr>
+                <tr>
+                  <td>3º</td>
+                  <td>Robert Lewandowski</td>
+                  <td>Bayern de Munique e Barcelona</td>
+                  <td>101</td>
+                  <td>2011-</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>Karim Benzema</td>
+                    <td>Lyon e Real Madrid</td>
+                    <td>90</td>
+                    <td>2005-2023</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>Raúl González</td>
+                    <td>Real Madrid</td>
+                    <td>71</td>
+                    <td>1995-2011</td>
+                  </tr>
+              </tbody>
+            </table>
+
+            <h3>Maiores Assistentes</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Posição</th>
+                  <th>Jogador</th>
+                  <th>Clube(s)</th>
+                  <th>Assistências</th>
+                  <th>Período</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1º</td>
+                  <td>Cristiano Ronaldo</td>
+                  <td>Real Madrid, Juventus e Manchester United</td>
+                  <td>42</td>
+                  <td>2003-2022</td>
+                </tr>
+                <tr>
+                  <td>2º</td>
+                  <td>Ángel Di María</td>
+                  <td>Benfica, Real Madrid, Juventus e Paris Saint-Germain</td>
+                  <td>41</td>
+                  <td>2008-</td>
+                </tr>
+                <tr>
+                  <td>3º</td>
+                  <td>Lionel Messi</td>
+                  <td>Barcelona e PSG</td>
+                  <td>40</td>
+                  <td>2005-2023</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>Neymar Jr.</td>
+                    <td>Barcelona e Paris Saint-Germain</td>
+                    <td>33</td>
+                    <td>2013-2023</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>Ryan Giggs</td>
+                    <td>Manchester United</td>
+                    <td>31</td>
+                    <td>1993-2014</td>
+                  </tr>
+              </tbody>
+            </table>
+      
+          <section id="impacto" class="section">
+            <h2>Impacto Global e Econômico</h2>
+            <div class="section-divider"></div>
+            <p>A Champions League é um evento que transcende o esporte, exercendo enorme impacto econômico e cultural. A competição gera receitas superiores a 3 bilhões de euros por temporada, provenientes de direitos de transmissão e patrocínios de empresas globais como Mastercard e Heineken.</p>
+            <p>Clubes participantes têm acesso a prêmios milionários, com o vencedor podendo arrecadar até 85 milhões de euros em uma campanha de sucesso. Além disso, cidades-sede das finais experimentam um "boom" econômico, com milhares de torcedores gerando receita em turismo e comércio local.</p>
+            <p>No aspecto global, o torneio é transmitido para mais de 200 países, conectando diferentes culturas em torno da paixão pelo futebol europeu.</p>
+            <div class="section-image-container">
+              <img src="/estadio.jpg" 
+                   alt="Estádio da UEFA Champions League" 
+                   class="section-image">
+              <div class="image-caption">Estádio da Champions League (Meramente Ilustrativo, presente nos comerciais da competição).</div>
+          </div>
+        </section>
+          
+        <section id="momentos" class="section">
+          <h2>Melhores Momentos</h2>
+          <h3>Lionel Messi vs. Bayer Leverkusen (2012)</h3>
+          <div class="section-divider"></div>
+          <div class="section-divider"></div>
+          <div class="section-image-container">
+            <img src="/messileverkusen.jpg" 
+                 alt="Lionel Messi vs. Bayer Leverkusen (2012)" 
+                 class="section-image">
+            <div class="image-caption">Messi marcou 5 gols na vitória do Barcelona por 7x1 nas oitavas de final, se tornando o primeiro jogador a atingir esse feito em um único jogo da Champions League.</div>
+        </div>
+        </section>
+
+        <section id="momentos" class="section">
+          <h3>Manchester City vs. Real Madrid (2022)</h3>
+          <div class="section-divider"></div>
+          <div class="section-divider"></div>
+          <div class="section-image-container">
+            <img src="/realecity.jpg" 
+                 alt="Manchester City vs. Real Madrid (2022)" 
+                 class="section-image">
+            <div class="image-caption">Na semifinal da Champions League, o City venceu o Real por 4x3 em um jogo eletrizante. De Bruyne, Gabriel Jesus, Foden e Bernardo Silva marcaram para o City, enquanto Benzema (2) e Vinícius Jr. brilharam pelo Real.</div>
+        </div>
+        </section>
+        
+        <section id="momentos" class="section">
+          <h3>Cristiano Ronaldo vs. Juventus (2018)</h3>
+          <div class="section-divider"></div>
+          <div class="section-divider"></div>
+          <div class="section-image-container">
+            <img src="/crisjuventus.jpg" 
+                 alt="Cristiano Ronaldo vs. Juventus (2018)" 
+                 class="section-image">
+            <div class="image-caption">Jogando pelo Real Madrid, Ronaldo marcou um gol de bicicleta espetacular nas quartas de final, sendo aplaudido de pé pela torcida adversária em Turim.</div>
+        </div>
+        </section>
+
+        <section id="momentos" class="section">
+          <h3>Liverpool vs. Milan (Final de 2005)</h3>
+          <div class="section-divider"></div>
+          <div class="section-divider"></div>
+          <div class="section-image-container">
+            <img src="/milaneliverpool.avif" 
+                 alt="Liverpool vs. Milan (Final de 2005)" 
+                 class="section-image">
+            <div class="image-caption">Conhecida como a "Noite Milagrosa de Istambul", o Liverpool saiu perdendo por 3x0 no primeiro tempo, mas empatou em 3x3 e venceu nos pênaltis.</div>
+        </div>
+        </section>
+
+        <section id="momentos" class="section">
+          <h3>Neymar Jr. vs. PSG (2017)</h3>
+          <div class="section-divider"></div>
+          <div class="section-divider"></div>
+          <div class="section-image-container">
+            <img src="/neymarpsg.jpg" 
+                 alt="Neymar Jr. vs. PSG (2017)" 
+                 class="section-image">
+            <div class="image-caption">Nas oitavas da Champions League, Neymar liderou a "Remontada" do Barcelona, marcando dois gols e dando a assistência para o decisivo 6x1, revertendo o 4x0 da ida contra o PSG.</div>
+        </div>
+        </section>
+
+        <section id="momentos" class="section">
+          <h3>Manchester United vs. Bayern de Munique (Final de 1999)</h3>
+          <div class="section-divider"></div>
+          <div class="section-divider"></div>
+          <div class="section-image-container">
+            <img src="/unitedebayern.jpg" 
+                 alt="Manchester United vs. Bayern de Munique (Final de 1999)" 
+                 class="section-image">
+            <div class="image-caption">Perdendo por 1x0 até os acréscimos, o United virou o jogo com dois gols de Teddy Sheringham e Ole Gunnar Solskjær em questão de minutos, vencendo por 2x1.</div>
+        </div>
+        </section>
+
+        <section id="curiosidades" class="section">
+            <h2>Curiosidades Fascinantes</h2>
+            <div class="section-divider"></div>
+            
+            <div class="curiosidades-grid">
+                <div class="curiosidade-card">
+                    <h3>Gol mais Rápido em uma Final</h3>
+                    <p>O gol mais rápido em uma final foi marcado por Paolo Maldini (AC Milan), aos 51 segundos, na decisão de 2005 entre Milan e Liverpool.</p>
+                    <div class="section-image-container">
+                      <img src="/maldini.jpg" 
+                           alt="Paolo Maldini (AC Milan)" 
+                           class="section-image">
+                      <div class="image-caption">Paolo Maldini marcou aos 51 segundos na final entre Milan e Liverpool, o gol mais rápido da história em decisões da Champions League, apesar da derrota nos pênaltis após o 3x3.</div>
+                  </div>
+                </div>
+                <div class="curiosidade-card">
+                    <h3>Maior Goleada</h3>
+                    <p>A maior goleada ocorreu em 2007, quando o Liverpool aplicou um 8-0 no Beşiktaş.</p>
+                    <div class="section-image-container">
+                      <img src="/img/liverpoolbesi.jpg" 
+                           alt="Liverpool vs. Besiktas (2008)" 
+                           class="section-image">
+                      <div class="image-caption">O Liverpool registrou a maior goleada da Champions League, vencendo o Besiktas por 8x0 na fase de grupos. Peter Crouch e Yossi Benayoun foram os destaques com três e dois gols, respectivamente.</div>
+                  </div>
+                </div>
+                <div class="curiosidade-card">
+                    <h3>Jogador Mais Jovem a Marcar</h3>
+                    <p>Ansu Fati (Barcelona), o mais jovem a marcar na competição, com 17 anos</p>
+                    <div class="section-image-container">
+                      <img src="/ansufati.jpg" 
+                           alt="Ansu Fati (Barcelona)" 
+                           class="section-image">
+                      <div class="image-caption">Aos 17 anos e 40 dias, Ansu Fati marcou na vitória do Barcelona por 2x1 contra a Inter de Milão, tornando-se o mais jovem a balançar as redes no torneio.</div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="https://pt.uefa.com/uefachampionsleague/">
+                <img src="/logo.png" alt="Logotipo da UEFA" class="footer-logo">
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 | Lucas Nunes Patracão | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
